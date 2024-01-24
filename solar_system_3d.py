@@ -135,3 +135,16 @@ class Planet(SolarSystemBody):
     ):
         super(Planet, self).__init__(solar_system, mass, position, velocity)
         self.colour = next(Planet.colours)
+
+class Moon(SolarSystemBody):
+    colours = itertools.cycle([(.1, 0, 0), (0, .1, 0), (0, 0, .1)])
+
+    def __init__(
+        self,
+        solar_system,
+        mass=1,
+        position=(0, 0, 0),
+        velocity=(0, 0, 0),
+    ):
+        super(Moon, self).__init__(solar_system, mass, position, velocity)
+        self.colour = "grey"

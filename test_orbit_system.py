@@ -1,15 +1,22 @@
-from solar_system_3d import SolarSystem, Planet, Sun
+from solar_system_3d import SolarSystem, Planet, Sun, Moon
 
 solar_system = SolarSystem(400, projection_2d=True)
 
-suns = (
-    Sun(solar_system, position=(40, 40, 40), velocity=(0, 0, 0)),)
 
-Planet = (
+planet = (
     Planet(
         solar_system,
-        10,
+        1000,
         position=(100, 50, 0),
+        velocity=(0, 0, 0),
+    ),
+)
+
+moons = (
+    Moon(
+        solar_system,
+        .001,
+        position=(10, 50, 0),
         velocity=(0, 5.5, 5.5),
     ),
 )
